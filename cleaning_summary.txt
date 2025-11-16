@@ -1,0 +1,16 @@
+Netflix dataset cleaning summary
+===============================
+Original shape: 8807 rows, 12 cols
+Final shape: 8807 rows, 15 cols
+
+Actions performed:
+- No unnecessary columns dropped.
+- Removed duplicate rows: 0 rows.
+- Standardized 8 text columns (trimmed whitespace, normalized missings).
+- Replaced missing director with 'Not Available'.
+- Replaced missing cast with 'Not Available'.
+- Replaced missing country with 'Not Available'.
+- Replaced missing rating with 'Not Rated'.
+- Cleaned 'duration' by splitting it into 'duration_value' (int) and 'duration_unit'.
+- Parsed 'date_added' into 'date_added_parsed' (datetime) and 'date_added_ddmmyyyy' (string). Failed to parse: 98 entries.
+- Converted all column names to snake_case.
